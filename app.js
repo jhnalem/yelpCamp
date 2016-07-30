@@ -26,12 +26,12 @@ var commentRoutes = require("./routes/comments");
 var campgroundRoutes =require("./routes/campgrounds");
 var indexRoutes =require("./routes/index");
 //connnet to database
-//  mongoose.connect('mongodb://localhost/yelp_camp');
+  mongoose.connect('mongodb://localhost/yelp_camp');
 
 // this is for deployment purpose , i got this from mongolab
 //  mongodb://<yohannes>:<wedialem2>@ds031865.mlab.com:31865/yelpcamp
  
-  mongoose.connect('mongodb://yohannes:wedialem2@ds031865.mlab.com:31865/yelpcamp');
+//   mongoose.connect('mongodb://yohannes:wedialem2@ds031865.mlab.com:31865/yelpcamp');
 //this used to update a form
 app.use(methodOverride('_method'));
 

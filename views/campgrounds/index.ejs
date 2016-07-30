@@ -1,0 +1,26 @@
+<% include ./../partials/header %>
+<div class="container">
+    <header class="jumbotron text-center">
+        <div class="container">
+            <h2>Welcome To Yelp Camp !</h2>
+            <p>This is one of the most beautifull yelp camp ever</p>
+            <a href="/campgrounds/new" class="btn btn-primary">add a new camp</a>
+        </div>
+    </header>
+        <div class="row text-center" style="display:flex; flex-wrap:wrap">
+            <% compounds.forEach(function(compound){ %>
+                <div class="col-md-3 col-sm-6">
+                    <div class="thumbnail">
+                       <img src="<%=compound['image']%>" />
+                       <div class="caption">
+                           <%=compound.name%>
+                       </div>
+                       <p>
+                           <a class="btn btn-sm btn-success btn-block" href="/campgrounds/<%= compound.id %>">more info</a>
+                       </p>
+                   </div>
+                </div>
+            <% }) %>
+        </div>
+</div>
+<% include ./../partials/footer %>
